@@ -64,3 +64,23 @@
   .heroes .name {
     align-self: center;
   }
+
+  .deselect{
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color:  rgb(182, 221, 172);
+    margin: .5em;
+    padding: .3rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: stretch;
+    height: 2.5em;
+    color: #2c3a41;
+  }
+
+  .deselect:hover{
+    color:  black;
+    left: .1em;
+  }
