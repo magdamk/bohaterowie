@@ -1,7 +1,11 @@
-<h2>
-    Informacje o: {{hero.name | uppercase}}
-</h2>
+<h2>Moi bohaterowie</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+            <span class="badge"> {{hero.id}} </span>
+            <span class="name"> {{hero.name}} </span>
+        </button>
+    </li>
+</ul>
 
-<div> <span>id: </span> {{hero.id}} </div>
-
-<div> <span>nazwa: </span> {{hero.name}} </div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
