@@ -1,11 +1,19 @@
 /* HeroesComponent's private CSS styles */
-/* HeroesComponent's private CSS styles */
 .heroes {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 22em;
 }
+
+input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
 .heroes li {
   position: relative;
   cursor: pointer;
@@ -54,22 +62,29 @@
   border-radius: 4px 0 0 4px;
 }
 
-  .deselect{
-    flex: 1;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color:  rgb(182, 221, 172);
-    margin: .5em;
-    padding: .3rem;
-    border-radius: 4px;
-    display: flex;
-    align-items: stretch;
-    height: 2.5em;
-    color: #2c3a41;
-  }
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+}
 
-  .deselect:hover{
-    color:  black;
-    left: .1em;
-  }
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+button.delete {
+  position: absolute;
+  left: 322px;
+  top: 5px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.delete:hover {
+  background-color: #525252;
+  color: white;
+}

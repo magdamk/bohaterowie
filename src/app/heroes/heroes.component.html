@@ -1,12 +1,24 @@
 <h2>Moi bohaterowie</h2>
+
+<div>
+    <label for="new-hero">Imię bohatera: </label>
+    <input id="new-hero" #heroName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+        Dodaj
+    </button>
+</div>
+
 <!-- <button type="button" (click)="onUnSelect()" class="deselect">Odznacz wszystkie</button> -->
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
         <!-- <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero"> -->
-            <a routerLink="/detail/{{hero.id}}">
+        <a routerLink="/detail/{{hero.id}}">
             <span class="badge"> {{hero.id}} </span>
-             {{hero.name}} 
-            </a>
+            {{hero.name}}
+        </a>
+        <button type="button" class="delete" title="Usuń bohatera" (click)="delete(hero)">x</button>
         <!-- </button> -->
     </li>
 </ul>
