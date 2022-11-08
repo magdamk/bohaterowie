@@ -1,12 +1,14 @@
 <h2>Moi bohaterowie</h2>
-<button type="button" (click)="onUnSelect()" class="deselect">Odznacz wszystkie</button>
+<!-- <button type="button" (click)="onUnSelect()" class="deselect">Odznacz wszystkie</button> -->
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
-        <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+        <!-- <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero"> -->
+            <a routerLink="/detail/{{hero.id}}">
             <span class="badge"> {{hero.id}} </span>
-            <span class="name"> {{hero.name}} </span>
-        </button>
+             {{hero.name}} 
+            </a>
+        <!-- </button> -->
     </li>
 </ul>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
